@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::group(
+    
     ['prefix' => '/{lang?}/', 'where' => ['lang' => 'vi|en']],
     function () {
         Route::get('/', [\App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
